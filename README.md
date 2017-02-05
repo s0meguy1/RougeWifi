@@ -23,8 +23,10 @@ Just place all files in /var/www/html/, run the command chown `www-data:www-data
 network) and run:
 `wifi.sh wlan0 eth0 {network name}` without brackets and enjoy!
 
-One final note -
+Some final notes -
 If the script runs but you dont see the network, you may have some driver issues with hostapd and alpha - just make sure you have the correct driver set running
 and it should work. You can troubleshoot by running: `hostapd -dd /etc/hostapd/hostapd.conf` and looking at the error messages
+If you want to run this using something other than dnsmasq or using a different IP scheme, you may need to edit index.html and dbconnect.php and remove "10.0.0.1" 
+from a few lines. They aren't really required for this to work.
 
 Special thanks to jeretc for his HTML templates! https://github.com/jeretc/cfp
