@@ -22,7 +22,7 @@ are using two wifi cards, just switch out eth0 (in my below example) for {intern
 the AP interface needs to be a wireless interface.
 
 **To run:**  
-Just place all files in /var/www/html/, run the command chown `www-data:www-data ./*` (may want to limit it to the html, js and images if running on a large
+Just place all files in /var/www/html/, run the command chown `www-data:www-data ./*` (may want to limit it to the html, js, password.txt and images if running on a large
 network) and run:
 `wifi.sh wlan0 eth0 {network name}` without brackets and enjoy!
 
