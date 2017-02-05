@@ -17,12 +17,12 @@ are using two wifi cards, just switch out eth0 (in my below example) for {intern
 the AP interface needs to be a wifi card.
 
 To run:
-Just place all files in /var/www/html/, run the command **"chown www-data:www-data ./*"** (may want to limit it to the html, js and images if running on a large
+Just place all files in /var/www/html/, run the command chown `www-data:www-data ./*` (may want to limit it to the html, js and images if running on a large
 network) and run:
-**wifi.sh wlan0 eth0 {network name}** without brackets and enjoy!
+`wifi.sh wlan0 eth0 {network name}` without brackets and enjoy!
 
 One final note -
 If the script runs but you dont see the network, you may have some driver issues with hostapd and alpha - just make sure you have the correct driver set running
-and it should work. You can troubleshoot by running: **hostapd -dd /etc/hostapd/hostapd.conf** and looking at the error messages
+and it should work. You can troubleshoot by running: `hostapd -dd /etc/hostapd/hostapd.conf` and looking at the error messages
 
 Special thanks to jeretc for his HTML templates! https://github.com/jeretc/cfp
