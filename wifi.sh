@@ -79,3 +79,4 @@ sleep 1
 echo -e "\e[32m###Starting hostapd"
 hostapd -B /etc/hostapd/hostapd.conf 1> /dev/null
 while true; do read x; done
+
