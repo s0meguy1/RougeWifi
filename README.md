@@ -9,9 +9,10 @@ people would enter gibberish. The failed first auth increases likelihood that th
 Once authenticated, both passwords ([first-attempt] and [second-attempt]) are dumped into "passwords.txt" along with the email/username and type of 
 authentication (Google, Facebook, Twitter and Linkedin) and the user is granted access to the internet. 
 
-You need to add the line:
+###IMPORTANT: You need to add the line:
 **www-data ALL=(ALL:ALL) NOPASSWD: /sbin/iptables, /usr/sbin/arp**
 to /etc/sudoers. NOTE: /sbin/ and /usr/sbin/ may not be the locations of arp/iptables for you, so do a "whereis arp && whereis iptables" to find the correct path.
+dbconnect will need to add routes to iptables based on the MAC address trying to connect, without sudo rights, this will not work.
 
 This was built on Kali Linux on a VM, so most of the dependencies to run this "out of box" are already installed, except hostapd. On other versions of linux you 
 may need to install php5, dnsmasq and some other php dependencies, along with apache2. Also the below assumes you have your internet connection through eth0. If you
