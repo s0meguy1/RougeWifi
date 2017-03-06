@@ -13,6 +13,8 @@ authentication (Google, Facebook, Twitter and Linkedin) and the user is granted 
 **www-data ALL=(ALL:ALL) NOPASSWD: /sbin/iptables, /usr/sbin/arp**
 to /etc/sudoers.  
 
+![alt tag](http://i.imgur.com/uz6DfnG.png)
+
 NOTE: /sbin/ and /usr/sbin/ may not be the locations of arp/iptables for you, so do a "whereis arp && whereis iptables" to find the correct path.
 dbconnect will need to add routes to iptables based on the MAC address trying to connect, without sudo rights, this will not work.
 
