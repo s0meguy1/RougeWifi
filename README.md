@@ -37,3 +37,5 @@ If you want to run this using something other than dnsmasq or using a different 
 from a few lines. They aren't really required for this to work.
   
 Special thanks to jeretc for his HTML templates! https://github.com/jeretc/cfp
+
+![alt tag](http://i.imgur.com/lsMvE7p.jpg)
