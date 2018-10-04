@@ -12,6 +12,7 @@ Once authenticated, both passwords ([first-attempt] and [second-attempt]) are du
 authentication (Google, Facebook, Twitter and Linkedin) and the user is granted access to the internet. 
 
 ###IMPORTANT: You need to add the line:
+
 **www-data ALL=(ALL:ALL) NOPASSWD: /sbin/iptables, /usr/sbin/arp**
 
 to 
