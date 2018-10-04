@@ -14,7 +14,9 @@ authentication (Google, Facebook, Twitter and Linkedin) and the user is granted 
 ###IMPORTANT: You need to add the line:
 **www-data ALL=(ALL:ALL) NOPASSWD: /sbin/iptables, /usr/sbin/arp**
 
-to /etc/sudoers.  
+to 
+
+/etc/sudoers.  
 
 ![alt tag](http://i.imgur.com/uz6DfnG.png)
 
