@@ -15,5 +15,5 @@ if(empty($email | $userpassword)) {
   $res=shell_exec("sudo /sbin/iptables -I captiveportal 1 -t mangle -m mac --mac-source $mac -j RETURN 2>&1");
   header("location:https://www.google.com");
 }
-else break;
+/*else break;*/
 ?>
