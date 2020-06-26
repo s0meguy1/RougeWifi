@@ -1,6 +1,8 @@
 #RogueWifi
 ![alt tag](http://i.imgur.com/1VlMf44.png)
 
+####### I am no longer maintaining this. I highly recommend using [vincenzogianfelice](https://github.com/vincenzogianfelice/RoguePortal) tool, he took my code and really went places with it. Anyhow, I will not respond to fixes for this anymore because I am tired of researching either PHP or iptables rules...
+
 This is my first contribution as I finally got the courage to start sharing my scripts with the community. I am not a programmer and as you can see, not an advanced script writer, but
 I put this out here to expand and improve it into something that I could never have done by myself!
  
